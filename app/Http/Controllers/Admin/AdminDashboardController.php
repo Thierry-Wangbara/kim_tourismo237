@@ -81,30 +81,31 @@ class AdminDashboardController extends Controller
     {
         $currentYear = now()->year;
         
+        // Pour SQLite, utiliser strftime au lieu de MONTH()
         $monthlyBookings = Booking::select(
-                DB::raw('MONTH(created_at) as month'),
+                DB::raw('CAST(strftime("%m", created_at) AS INTEGER) as month'),
                 DB::raw('COUNT(*) as count'),
                 DB::raw('SUM(total_price) as revenue')
             )
-            ->whereYear('created_at', $currentYear)
+            ->whereRaw('strftime("%Y", created_at) = ?', [$currentYear])
             ->groupBy('month')
             ->orderBy('month')
             ->get();
 
         $monthlySites = Site::select(
-                DB::raw('MONTH(created_at) as month'),
+                DB::raw('CAST(strftime("%m", created_at) AS INTEGER) as month'),
                 DB::raw('COUNT(*) as count')
             )
-            ->whereYear('created_at', $currentYear)
+            ->whereRaw('strftime("%Y", created_at) = ?', [$currentYear])
             ->groupBy('month')
             ->orderBy('month')
             ->get();
 
         $monthlyUsers = User::select(
-                DB::raw('MONTH(created_at) as month'),
+                DB::raw('CAST(strftime("%m", created_at) AS INTEGER) as month'),
                 DB::raw('COUNT(*) as count')
             )
-            ->whereYear('created_at', $currentYear)
+            ->whereRaw('strftime("%Y", created_at) = ?', [$currentYear])
             ->groupBy('month')
             ->orderBy('month')
             ->get();
