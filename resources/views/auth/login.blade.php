@@ -8,7 +8,7 @@
         <!-- Section gauche - Image et présentation -->
         <div class="col-lg-6 d-none d-lg-block p-0">
             <div class="position-relative h-100">
-                <img src="images/login-bg.jpg" 
+                <img src="images/KRIBI.jpg" 
                      class="w-100 h-100" 
                      style="object-fit: cover;" 
                      alt="Connexion TOURISM237">
@@ -42,7 +42,7 @@
             <div class="w-100" style="max-width: 400px;">
                 <!-- Logo et titre -->
                 <div class="text-center mb-5">
-                    <h1 class="text-primary fw-bold mb-3 text-primary-content">
+                    <h1 class="text-dark fw-bold mb-3 text-primary-content">
                         <i class="bi bi-globe me-2"></i>TOURISM237
                     </h1>
                     <h2 class="h4 text-muted">Connexion à votre compte</h2>

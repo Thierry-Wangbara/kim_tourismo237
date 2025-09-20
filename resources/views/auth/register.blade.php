@@ -8,7 +8,7 @@
         <!-- Section gauche - Image et présentation -->
         <div class="col-lg-6 d-none d-lg-block p-0">
             <div class="position-relative h-100">
-                <img src="images/register-bg.jpg" 
+                <img src="images/kribi.jpg" 
                      class="w-100 h-100" 
                      style="object-fit: cover;" 
                      alt="Inscription TOURISM237">
@@ -42,7 +42,7 @@
             <div class="w-100" style="max-width: 500px;">
                 <!-- Logo et titre -->
                 <div class="text-center mb-5">
-                    <h1 class="text-primary fw-bold mb-3">
+                    <h1 class="text-dark fw-bold mb-3">
                         <i class="bi bi-globe me-2"></i>TOURISM237
                     </h1>
                     <h2 class="h4 text-muted">Créer votre compte</h2>
@@ -199,7 +199,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-3">
+                            <!-- <div class="col-md-4 mb-3">
                                 <div class="card h-100">
                                     <div class="card-body text-center">
                                         <input class="form-check-input" 
@@ -217,8 +217,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4 mb-3">
+                            </div> -->
+                            <!-- <div class="col-md-4 mb-3">
                                 <div class="card h-100">
                                     <div class="card-body text-center">
                                         <input class="form-check-input" 
@@ -236,7 +236,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
