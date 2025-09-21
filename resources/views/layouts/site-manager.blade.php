@@ -16,194 +16,319 @@
 
   <style>
     :root {
-      --primary-color: #FF7D1A;
-      --secondary-color: #2FAB73;
-      --dark-color: #1A1A2E;
-      --light-color: #F8F9FA;
-      --text-color: #333333;
-      --success-color: #28a745;
-      --warning-color: #ffc107;
-      --danger-color: #dc3545;
-      --info-color: #17a2b8;
+      --primary-orange: #FF7D1A;
+      --orange-light: #FFA057;
+      --orange-lighter: #FFE3D1;
+      --dark-blue: #1A1A2E;
+      --dark-gray: #2D2D3A;
+      --medium-gray: #6B7280;
+      --light-gray: #F3F4F6;
+      --white: #FFFFFF;
+      --text-dark: #1F2937;
+      --text-light: #6B7280;
     }
 
     body {
       font-family: 'Poppins', sans-serif;
-      color: var(--text-color);
-      background-color: var(--light-color);
+      color: var(--text-dark);
+      background-color: var(--light-gray);
+      line-height: 1.6;
     }
 
+    /* Navigation */
     .navbar {
-      background-color: var(--dark-color) !important;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background-color: var(--white) !important;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+      padding: 0.8rem 0;
     }
 
     .navbar-brand {
       font-weight: 700;
-      color: var(--primary-color) !important;
+      color: var(--primary-orange) !important;
       font-size: 1.5rem;
+      display: flex;
+      align-items: center;
     }
 
     .nav-link {
-      color: #ADB5BD !important;
+      color: var(--medium-gray) !important;
       font-weight: 500;
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
+      position: relative;
     }
 
     .nav-link:hover,
     .nav-link.active {
-      color: var(--primary-color) !important;
+      color: var(--primary-orange) !important;
     }
 
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--primary-orange);
+      border-radius: 2px;
+    }
+
+    /* Dropdown menu */
+    .dropdown-menu {
+      border: none;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      border-radius: 10px;
+      padding: 0.5rem;
+    }
+
+    .dropdown-item {
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      transition: all 0.2s;
+    }
+
+    .dropdown-item:hover {
+      background-color: var(--orange-lighter);
+      color: var(--primary-orange);
+    }
+
+    /* Cards */
     .card {
       border: none;
       border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
     }
 
     .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+      background-color: var(--white);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      font-weight: 600;
+      padding: 1rem 1.25rem;
+    }
+
+    .card-body {
+      padding: 1.25rem;
+    }
+
+    /* Buttons */
+    .btn {
+      font-weight: 500;
+      border-radius: 8px;
+      padding: 0.5rem 1.25rem;
+      transition: all 0.2s;
     }
 
     .btn-primary {
-      background-color: var(--primary-color);
-      border-color: var(--primary-color);
-      border-radius: 8px;
-      font-weight: 500;
+      background-color: var(--primary-orange);
+      border-color: var(--primary-orange);
     }
 
     .btn-primary:hover {
-      background-color: #E56E0D;
-      border-color: #E56E0D;
+      background-color: var(--orange-light);
+      border-color: var(--orange-light);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(255, 125, 26, 0.2);
     }
 
-    .btn-success {
-      background-color: var(--success-color);
-      border-color: var(--success-color);
-      border-radius: 8px;
+    .btn-outline-primary {
+      color: var(--primary-orange);
+      border-color: var(--primary-orange);
     }
 
-    .btn-warning {
-      background-color: var(--warning-color);
-      border-color: var(--warning-color);
-      border-radius: 8px;
+    .btn-outline-primary:hover {
+      background-color: var(--primary-orange);
+      border-color: var(--primary-orange);
     }
 
-    .btn-danger {
-      background-color: var(--danger-color);
-      border-color: var(--danger-color);
-      border-radius: 8px;
-    }
-
-    .btn-info {
-      background-color: var(--info-color);
-      border-color: var(--info-color);
-      border-radius: 8px;
-    }
-
-    .table th {
-      background-color: var(--light-color);
-      border-top: none;
-      font-weight: 600;
-      color: var(--text-color);
-    }
-
-    .badge {
-      font-size: 0.75rem;
-      border-radius: 6px;
-    }
-
+    /* Sidebar */
     .sidebar {
-      min-height: calc(100vh - 56px);
-      background-color: #ffffff;
-      border-right: 1px solid #e9ecef;
-      box-shadow: 2px 0 4px rgba(0,0,0,0.05);
+      min-height: calc(100vh - 76px);
+      background-color: var(--white);
+      border-right: 1px solid rgba(0, 0, 0, 0.05);
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.03);
+      padding: 1.5rem 0;
     }
 
     .sidebar .nav-link {
-      color: var(--text-color) !important;
-      padding: 0.75rem 1rem;
+      color: var(--text-dark) !important;
+      padding: 0.75rem 1.25rem;
       border-radius: 8px;
-      margin-bottom: 0.25rem;
-      transition: all 0.3s ease;
+      margin: 0.15rem 0.75rem;
+      display: flex;
+      align-items: center;
     }
 
     .sidebar .nav-link:hover {
-      background-color: #f8f9fa;
-      color: var(--primary-color) !important;
+      background-color: var(--orange-lighter);
+      color: var(--primary-orange) !important;
     }
 
     .sidebar .nav-link.active {
-      background-color: var(--primary-color);
-      color: white !important;
+      background-color: var(--primary-orange);
+      color: var(--white) !important;
     }
 
+    .sidebar .nav-link i {
+      margin-right: 0.75rem;
+      font-size: 1.1rem;
+    }
+
+    /* Main content */
+    main {
+      padding: 2rem 0;
+      background-color: var(--light-gray);
+    }
+
+    /* Stats cards */
     .stats-card {
-      background: linear-gradient(135deg, var(--primary-color) 0%, #ff9a56 100%);
-      color: white;
+      background: linear-gradient(135deg, var(--white) 0%, var(--white) 100%);
+      color: var(--text-dark);
       border-radius: 12px;
+      border-left: 4px solid var(--primary-orange);
     }
 
-    .stats-card.success {
-      background: linear-gradient(135deg, var(--success-color) 0%, #34ce57 100%);
+    .stats-card .card-title {
+      color: var(--medium-gray);
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
     }
 
-    .stats-card.warning {
-      background: linear-gradient(135deg, var(--warning-color) 0%, #ffd43b 100%);
+    .stats-card .card-value {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--text-dark);
     }
 
-    .stats-card.danger {
-      background: linear-gradient(135deg, var(--danger-color) 0%, #e74c3c 100%);
+    .stats-card .icon-wrapper {
+      background-color: var(--orange-lighter);
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-orange);
+      font-size: 1.5rem;
     }
 
-    .stats-card.info {
-      background: linear-gradient(135deg, var(--info-color) 0%, #20c997 100%);
+    /* Tables */
+    .table {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
 
-    .stats-card.secondary {
-      background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+    .table th {
+      background-color: var(--orange-lighter);
+      color: var(--text-dark);
+      font-weight: 600;
+      padding: 1rem;
+      border-bottom: none;
     }
 
+    .table td {
+      padding: 1rem;
+      vertical-align: middle;
+      border-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .table tr:hover {
+      background-color: rgba(255, 125, 26, 0.03);
+    }
+
+    /* Badges */
+    .badge {
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    .badge-success {
+      background-color: rgba(72, 187, 120, 0.15);
+      color: #48BB78;
+    }
+
+    .badge-warning {
+      background-color: rgba(246, 173, 85, 0.15);
+      color: #F6AD55;
+    }
+
+    .badge-danger {
+      background-color: rgba(245, 101, 101, 0.15);
+      color: #F56565;
+    }
+
+    /* Tabs */
     .nav-tabs {
-      border-bottom: 2px solid #e9ecef;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     .nav-tabs .nav-link {
       border: none;
-      color: var(--text-color);
+      color: var(--text-light);
       font-weight: 500;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px 8px 0 0;
-      margin-right: 0.25rem;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      margin-right: 0.5rem;
     }
 
     .nav-tabs .nav-link:hover {
-      border-color: transparent;
-      background-color: #f8f9fa;
+      background-color: var(--light-gray);
+      color: var(--primary-orange);
     }
 
     .nav-tabs .nav-link.active {
-      background-color: var(--primary-color);
-      color: white;
-      border-color: var(--primary-color);
+      background-color: var(--primary-orange);
+      color: var(--white);
     }
 
     .tab-content {
-      background-color: white;
-      border-radius: 0 0 12px 12px;
+      background-color: var(--white);
+      border-radius: 12px;
       padding: 1.5rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      margin-top: 1rem;
     }
 
+    /* Section headers */
+    .section-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .section-header h2 {
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-header p {
+      color: var(--text-light);
+      margin-bottom: 0;
+    }
+
+    /* Responsive adjustments */
     @media (max-width: 768px) {
       .sidebar {
         min-height: auto;
+        padding: 1rem 0;
       }
       
       .stats-card {
         margin-bottom: 1rem;
+      }
+      
+      .sidebar .nav-link {
+        margin: 0.15rem 0.5rem;
+        padding: 0.6rem 1rem;
       }
     }
   </style>
@@ -211,10 +336,10 @@
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="{{ route('dashboard.site-manager') }}">
-        <i class="bi bi-geo-alt me-2"></i>TOURISM237 - Gestionnaire
+        <i class="bi bi-geo-alt me-2"></i>TOURISM237
       </a>
       
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -224,10 +349,11 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-              <i class="bi bi-person-circle me-1"></i>{{ auth()->user()->name }}
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
+              <i class="bi bi-person-circle me-2"></i>
+              <span>{{ auth()->user()->name }}</span>
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu dropdown-menu-end">
               <li><a class="dropdown-item" href="{{ route('profile') }}">
                 <i class="bi bi-person me-2"></i>Mon Profil
               </a></li>
@@ -258,32 +384,32 @@
           <ul class="nav flex-column">
             <li class="nav-item">
               <a class="nav-link {{ request()->is('dashboard/site-manager') ? 'active' : '' }}" href="{{ route('dashboard.site-manager') }}">
-                <i class="bi bi-speedometer2 me-2"></i>Dashboard
+                <i class="bi bi-speedometer2"></i>Dashboard
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link {{ request()->is('site-manager/bookings*') ? 'active' : '' }}" href="{{ route('site-manager.bookings.index') }}">
-                <i class="bi bi-calendar-check me-2"></i>Réservations
+                <i class="bi bi-calendar-check"></i>Réservations
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link {{ request()->is('sites/manager*') ? 'active' : '' }}" href="{{ route('sites.manager.index') }}">
-                <i class="bi bi-geo-alt me-2"></i>Mes Sites
+                <i class="bi bi-geo-alt"></i>Mes Sites
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('sites.manager.create') }}">
-                <i class="bi bi-plus-circle me-2"></i>Nouveau Site
+                <i class="bi bi-plus-circle"></i>Nouveau Site
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#analytics">
-                <i class="bi bi-graph-up me-2"></i>Analytiques
+                <i class="bi bi-graph-up"></i>Analytiques
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#settings">
-                <i class="bi bi-gear me-2"></i>Paramètres
+                <i class="bi bi-gear"></i>Paramètres
               </a>
             </li>
           </ul>

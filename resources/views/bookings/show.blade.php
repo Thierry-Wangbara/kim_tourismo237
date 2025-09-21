@@ -167,7 +167,7 @@
                                 @endif
 
                                 <div class="d-grid mt-3">
-                                    <a href="{{ route('explore.show', $booking->site) }}" class="btn btn-outline-primary">
+                                    <a href="{{ route('explore.show', $booking->site) }}" class="btn btn-outline-orange">
                                         <i class="bi bi-eye me-2"></i>Voir le site
                                     </a>
                                 </div>

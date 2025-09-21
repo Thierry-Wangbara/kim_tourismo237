@@ -17,7 +17,7 @@
   <style>
     :root {
       --primary-color: #FF7D1A;
-      --secondary-color: #2FAB73;
+      --secondary-color: #e4750dff;
       --dark-color: #1A1A2E;
       --light-color: #F8F9FA;
       --text-color: #333333;
@@ -350,7 +350,7 @@
 
     <div class="row">
       <div class="col-md-6 text-center text-md-start mx-auto">
-        <p class="mb-0">&copy; 2023 TOURISM237. Tous droits réservés.</p>
+        <p class="mb-0">&copy; 2025 TOURISM237. Tous droits réservés.</p>
       </div>
     </div>
     </div>

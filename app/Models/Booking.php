@@ -50,8 +50,8 @@ class Booking extends Model
             'pending' => ['label' => 'En attente', 'class' => 'bg-warning'],
             'confirmed' => ['label' => 'Confirmée', 'class' => 'bg-success'],
             'cancelled' => ['label' => 'Annulée', 'class' => 'bg-danger'],
-            'completed' => ['label' => 'Terminée', 'class' => 'bg-info'],
-            'rejected' => ['label' => 'Refusée', 'class' => 'bg-secondary'],
+            'completed' => ['label' => 'Terminée', 'class' => 'bg-success'],
+            'rejected' => ['label' => 'Refusée', 'class' => 'bg-danger'],
         ];
 
         return $statuses[$this->status] ?? $statuses['pending'];

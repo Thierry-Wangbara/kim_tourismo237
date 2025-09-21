@@ -31,7 +31,7 @@
             </p>
         </div>
         <div class="col-md-6">
-            <img src="images/equipe-travail.jpg" class="img-fluid rounded" alt="Notre équipe">
+            <img src="images/equipe.jpg" class="img-fluid rounded" alt="Notre équipe">
         </div>
     </div>
 </x-tourism.section>
@@ -94,7 +94,7 @@
             <div class="card text-center">
                 <img src="images/sarah.png" class="card-img-top rounded-circle mx-auto mt-3" style="width: 150px; height: 150px; object-fit: cover;" alt="Sarah">
                 <div class="card-body">
-                    <h5 class="card-title">Sarah Manga</h5>
+                    <h5 class="card-title">Sarah Kim</h5>
                     <p class="text-muted">Directrice Générale</p>
                     <p class="card-text">
                         Passionnée de tourisme, Sarah dirige TOURISM237 avec une vision claire 
@@ -106,12 +106,12 @@
         
         <div class="col-md-4 mb-4">
             <div class="card text-center">
-                <img src="images/guide1.jpg" class="card-img-top rounded-circle mx-auto mt-3" style="width: 150px; height: 150px; object-fit: cover;" alt="Guide">
+                <img src="images/hadja.jpg" class="card-img-top rounded-circle mx-auto mt-3" style="width: 150px; height: 150px; object-fit: cover;" alt="Guide">
                 <div class="card-body">
-                    <h5 class="card-title">Jean-Pierre Nguema</h5>
-                    <p class="text-muted">Guide Principal</p>
+                    <h5 class="card-title">Hadja Itcha</h5>
+                    <p class="text-muted">Guide Principale</p>
                     <p class="card-text">
-                        Guide expérimenté avec plus de 10 ans d'expérience, Jean-Pierre connaît 
+                        Guide expérimenté avec plus de 10 ans d'expérience, Hadja Itcha connaît 
                         tous les secrets du Cameroun.
                     </p>
                 </div>
@@ -120,12 +120,12 @@
         
         <div class="col-md-4 mb-4">
             <div class="card text-center">
-                <img src="images/guide2.jpg" class="card-img-top rounded-circle mx-auto mt-3" style="width: 150px; height: 150px; object-fit: cover;" alt="Guide">
+                <img src="images/thierry.jpg" class="card-img-top rounded-circle mx-auto mt-3" style="width: 150px; height: 150px; object-fit: cover;" alt="Guide">
                 <div class="card-body">
-                    <h5 class="card-title">Marie-Claire Fouda</h5>
+                    <h5 class="card-title">Wangbara Thierry</h5>
                     <p class="text-muted">Responsable Logistique</p>
                     <p class="card-text">
-                        Marie-Claire s'occupe de la logistique et s'assure que chaque détail 
+                        Wangbara Thierry s'occupe de la logistique et s'assure que chaque détail 
                         de votre voyage soit parfaitement organisé.
                     </p>
                 </div>
@@ -176,7 +176,7 @@
 </x-tourism.section>
 
 <!-- Statistiques -->
-<x-tourism.stats />
+<!-- <x-tourism.stats /> -->
 
 <!-- Témoignages -->
 <x-tourism.section 
@@ -185,26 +185,26 @@
 >
     <div class="row">
         <x-tourism.testimonial-card 
-            name="Pierre Dubois"
-            location="Voyageur français"
+            name="Marcom Alex"
+            location="Voyageur Americain"
             text="TOURISM237 a transformé ma vision du Cameroun. Un service exceptionnel et des guides passionnés !"
-            image="images/client1.jpg"
+            image="images/alex.jpg"
             rating="5"
         />
         
         <x-tourism.testimonial-card 
-            name="Anna Schmidt"
-            location="Touriste allemande"
-            text="Grâce à TOURISM237, j'ai découvert un Cameroun que je ne connaissais pas. Une expérience inoubliable !"
-            image="images/client2.jpg"
+            name="Brea Esther"
+            location="Touriste francaise"
+            text="Brea Esther à TOURISM237, j'ai découvert un Cameroun que je ne connaissais pas. Une expérience inoubliable !"
+            image="images/brea.jpg"
             rating="5"
         />
         
         <x-tourism.testimonial-card 
-            name="Mohamed Ali"
+            name="Djibril Tamo"
             location="Voyageur marocain"
             text="Professionnalisme et chaleur humaine, c'est ce qui caractérise TOURISM237. Je recommande vivement !"
-            image="images/client3.jpg"
+            image="images/djibril.jpg"
             rating="5"
         />
     </div>

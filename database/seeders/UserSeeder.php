@@ -26,8 +26,8 @@ class UserSeeder extends Seeder
         ]);
 
         User::create([
-            'first_name' => 'Marie',
-            'last_name' => 'Dubois',
+            'first_name' => 'Hadja',
+            'last_name' => ' itcha',
             'email' => 'tourist@example.com',
             'password' => Hash::make('password'),
             'account_type' => 'tourist',
@@ -36,13 +36,13 @@ class UserSeeder extends Seeder
         ]);
 
         User::create([
-            'first_name' => 'Jean-Pierre',
-            'last_name' => 'Guide',
+            'first_name' => 'Wangbara',
+            'last_name' => 'Thierry',
             'email' => 'site@example.com',
             'password' => Hash::make('password'),
             'account_type' => 'site_manager',
             'phone' => '+237 6XX XX XX XX',
-            'location' => 'Foumban, Cameroun',
+            'location' => 'Nord, Cameroun',
         ]);
 
     }

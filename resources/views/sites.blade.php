@@ -96,7 +96,7 @@
 </x-tourism.section>
 
 <!-- Section Statistiques -->
-<x-tourism.stats />
+<!-- <x-tourism.stats /> -->
 
 <!-- Section Témoignages -->
 <x-tourism.section 
@@ -105,15 +105,15 @@
 >
     <div class="row">
         <x-tourism.testimonial-card 
-            name="Marie Dubois"
-            location="Touriste française"
+            name="Djibril Tamo"
+            location="Touriste marocain"
             text="Une expérience incroyable ! TOURISM237 a rendu mon voyage au Cameroun inoubliable avec leur service personnalisé et leurs guides experts."
             image="images/teacher.jpg"
             rating="5"
         />
         
         <x-tourism.testimonial-card 
-            name="Jean-Pierre Martin"
+            name="Laurette Melanie"
             location="Voyageur belge"
             text="Le meilleur organisateur de voyages au Cameroun. Tout était parfaitement planifié et exécuté. Je recommande vivement !"
             image="images/lo.jpg"
@@ -121,7 +121,7 @@
         />
         
         <x-tourism.testimonial-card 
-            name="Sarah Manga"
+            name="Sarah kimaye"
             location="Touriste camerounaise"
             text="Même en tant que camerounaise, j'ai découvert des endroits incroyables grâce à TOURISM237. Un service professionnel et attentionné."
             image="images/sarah.png"

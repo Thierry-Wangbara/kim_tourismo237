@@ -7,7 +7,7 @@
     <!-- En-tête -->
     <div class="row mb-4">
         <div class="col-12">
-            <div class="card border-0 shadow-sm" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <div class="card border-0 shadow-sm" style="background: linear-gradient(135deg, #f1860bff 0%, #ca8e4eff 100%);">
                 <div class="card-body text-white p-4">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
